@@ -3,6 +3,7 @@
 	<title>Form Input Matakuliah</title>
 </head>
 <body>
+	<?php echo validation_errors(); ?>
 	<center>
 		<form action="<?= base_url('matakuliah/cetak'); ?>" method="post">
 			<table>
@@ -15,12 +16,12 @@
 				<tr>
 					<th>Kode MTK</th>
 					<th>:</th>
-					<td> <input type="text" name="kode" id="kode"></td>
+					<td> <input type="text" name="kode" id="kode" value="<?php echo set_value('kode');?>"></td>
 				</tr>
 				<tr>
 					<th>Nama MTK</th>
 					<td>:</td>
-					<td><input type="text" name="nama" id="nama"></td>
+					<td><input type="text" name="nama" id="nama" value="<?php echo set_value('nama');?>"></td>
 				</tr>
 				<tr>
 					<th>SKS</th>
